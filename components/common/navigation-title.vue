@@ -1,7 +1,7 @@
 <template>
   <view :style="styles">
-    <view class="status-bar" :style="{ height: statusBarHeight + 'px' }" />
-    <view class="navigation-bar" :style="{ height: navigationBarHeight + 'px' }">
+    <view class="status-title" :style="{ height: statusBarHeight + 'px' }" />
+    <view class="navigation-title" :style="{ height: navigationBarHeight + 'px' }">
 		<text class="title">{{title}}</text>
 	</view>
   </view>
@@ -10,11 +10,6 @@
 <script>
 export default {
   props: {
-    alpha: {
-      type: Number,
-      default: 0,
-      validator: value => value >= 0 && value <= 1
-    },
 	title: {
 		type: String,
 		default: '首页'
@@ -30,10 +25,9 @@ export default {
     styles() {
       return `
         position: fixed;
-        background: rgba(20, 64, 162, ${this.alpha});
-        transition: all 1s;
+        background: #1440A2;
         width: 100%;
-        z-index: 999;
+        z-index: 99;
       `;
     }
   }
@@ -41,7 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.navigation-bar {
+.navigation-title {
   display: flex;
   align-items: center;
   .title {

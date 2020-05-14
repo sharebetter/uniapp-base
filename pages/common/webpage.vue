@@ -16,7 +16,7 @@ export default {
     };
   },
   onLoad(e) {
-    this.url = e.url;
+    this.url = decodeURIComponent(e.url)	
   },
   methods: {}
 };

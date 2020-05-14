@@ -1,5 +1,5 @@
 {
-  "name": "mohrss-recruitment",
+  "name": "uniapp-base",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -8,13 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://gitlab.jjshebao.com/UniApp/mohrss-recruitment.git"
+    "url": ""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@dcloudio/uni-ui": "^1.1.8",
-    "dayjs": "^1.8.23"
+    "dayjs": "^1.8.23",
+    "vue-awesome-swiper": "^3.1.3"
   }
 }

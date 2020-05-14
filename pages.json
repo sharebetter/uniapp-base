@@ -1,56 +1,41 @@
 {
   "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
     {
-      "path": "pages/index/index",
+      "path": "pages/home/index",
       "style": {
-        "navigationBarTitleText": "",
+        "navigationBarTitleText": "首页",
         "navigationStyle": "custom",
-        "transparentTitle": "always",
         "navigationBarTextStyle": "white",
-        "navigationBarBackgroundColor": "#4077F4"
+        "navigationBarBackgroundColor": "#1440A2"
       }
-    },
-    {
-      "path": "pages/index/job-list",
-      "style": {
-        "navigationBarTitleText": "岗位筛选",
-        "enablePullDownRefresh": true
-
-      }
-    },
-    {
-      "path": "pages/index/province-session",
-      "style": {
-        "navigationBarTitleText": "各省分会场"
-      }
-    },
-    {
-      "path": "pages/index/area-session",
-      "style": {
-        "navigationBarTitleText": "区域会场"
-      }
-    },
-    {
-      "path": "pages/index/session",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": true
-      }
-    },
-    {
-      "path": "pages/index/job-detail",
-      "style": {
-        "navigationBarTitleText": "岗位详情",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/index/company-detail",
-      "style": {
-        "navigationBarTitleText": "单位详情",
-        "enablePullDownRefresh": false
-      }
-    },
+    },		
+	{
+	  "path": "pages/login/index",
+	  "style": {
+	    "navigationBarTitleText": "用户授权",
+	    // "navigationStyle": "custom",
+	    "navigationBarTextStyle": "white",
+	    "navigationBarBackgroundColor": "#1440A2"
+	  }
+	},
+	{
+	  "path": "pages/project/index",
+	  "style": {
+	    "navigationBarTitleText": "专题",
+	    // "navigationStyle": "custom",
+	    "navigationBarTextStyle": "white",
+	    "navigationBarBackgroundColor": "#1440A2"
+	  }
+	},
+	{
+	  "path": "pages/home/search",
+	  "style": {
+	    "navigationBarTitleText": "高级搜索",
+	    // "navigationStyle": "custom",
+	    "navigationBarTextStyle": "white",
+	    "navigationBarBackgroundColor": "#1440A2"
+	  }
+	},
     {
       "path": "pages/common/webpage"
     },
@@ -60,9 +45,36 @@
   ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "中国公共招聘网",
+    "navigationBarTitleText": "政策查询小程序",
     "navigationBarBackgroundColor": "#FFFFFF",
     "backgroundColor": "#FFFFFF"
-  }
+  },
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	},
+	"tabBar": {
+	    "color": "#303133",
+	    "selectedColor": "#1440A2",
+	    "borderStyle": "black",
+	    "backgroundColor": "#ffffff",
+	    "list": [{
+	        "pagePath": "pages/home/index",
+	        "iconPath": "static/common/icon-tab/icon-home.png",
+	        "selectedIconPath": "static/common/icon-tab/icon-home-active.png",
+	        "text": "首页"
+	    }, {
+	        "pagePath": "pages/project/index",
+	        "iconPath": "static/common/icon-tab/icon-project.png",
+	        "selectedIconPath": "static/common/icon-tab/icon-project-active.png",
+	        "text": "专题"
+	    }]
+	}
 
 }

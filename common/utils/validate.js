@@ -58,5 +58,23 @@ module.exports = {
         'message': '校验通过'
       }
     }
+  },
+  checkEmail(email){
+	  /**
+	 * 校验验证邮箱
+	 * @param {*} str
+	 */
+	const regEmail = /^([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+(\.[a-zA-Z]{2,3})+$/; //邮箱
+	if(!regEmail.test(email)){
+		return {
+		  'status': 0,
+		  'message': '请输入正确的邮箱'
+		}
+	} else {
+		return {
+		  'status': 1,
+		  'message': '校验通过'
+		}
+	}
   }
 }
